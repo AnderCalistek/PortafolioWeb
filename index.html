@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="description" content="Portafolio profesional de Anderson Castro, Ingeniero de Software: desarrollo web, automatización con Python, Azure DevOps y proyectos destacados."/>
+  <meta property="og:title" content="Anderson Castro - Ingeniero de Software"/>
+  <meta property="og:description" content="Desarrollo web, automatización con Python y gestión de proyectos en Azure DevOps. Proyectos, habilidades y contacto."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://tu-dominio-o-github-pages"/>
+  <meta property="og:image" content="https://og-playground.vercel.app/api/og?title=Anderson%20Castro&subtitle=Ingeniero%20de%20Software"/>
+  <meta name="theme-color" content="#0f172a"/>
+  <title>Anderson Castro - Ingeniero de Software</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%230f172a"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Inter, Arial" font-size="26" font-weight="700" fill="%23ffffff">AC</text></svg>'/>
+  <link rel="stylesheet" href="./css/styles.css"/>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#06b6d4",
+            "background-dark": "#0f172a",
+            "accent": "#8b5cf6"
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-dark font-display text-gray-200 antialiased">
+
+  <!-- Fondo animado -->
+  <div class="animated-background" id="particle-container"></div>
+
+  <!-- Header / Nav -->
+  <header class="fixed inset-x-0 top-0 z-30">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mt-4 flex items-center justify-between rounded-xl bg-gray-900/60 px-4 py-3 backdrop-blur supports-[backdrop-filter]:bg-gray-900/40 ring-1 ring-white/10">
+        <a href="#hero" class="flex items-center gap-2">
+          <span class="inline-block h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_12px_2px_rgba(6,182,212,0.7)]"></span>
+          <span class="text-sm font-bold tracking-wide text-white">Anderson Castro</span>
+        </a>
+        <nav class="hidden gap-6 text-sm font-medium text-gray-300 md:flex">
+          <a href="#about" class="hover:text-white">Sobre mí</a>
+          <a href="#skills" class="hover:text-white">Habilidades</a>
+          <a href="#projects" class="hover:text-white">Proyectos</a>
+          <a href="#contact" class="hover:text-white">Contacto</a>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="./assets/cv-anderson-castro.pdf" download class="hidden sm:inline-flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2 text-xs font-semibold text-white ring-1 ring-white/10 transition hover:bg-white/10">Descargar CV</a>
+          <button id="themeToggle" aria-label="Cambiar tema" class="inline-flex items-center justify-center rounded-lg p-2 text-gray-300 ring-1 ring-white/10 hover:bg-white/5 hover:text-white"><span id="themeIcon" class="block">🌙</span></button>
+          <button id="menuBtn" aria-label="Abrir menú" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-gray-300 hover:bg-white/5 hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path fill-rule="evenodd" d="M3.75 5.25a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Zm0 6a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Zm0 6a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobileMenu" class="md:hidden mt-2 hidden rounded-xl bg-gray-900/60 backdrop-blur supports-[backdrop-filter]:bg-gray-900/40 ring-1 ring-white/10">
+        <nav class="flex flex-col p-4 text-sm font-medium text-gray-300">
+          <a href="#about" class="rounded-lg px-3 py-2 hover:bg-white/5 hover:text-white">Sobre mí</a>
+          <a href="#skills" class="rounded-lg px-3 py-2 hover:bg-white/5 hover:text-white">Habilidades</a>
+          <a href="#projects" class="rounded-lg px-3 py-2 hover:bg-white/5 hover:text-white">Proyectos</a>
+          <a href="#contact" class="rounded-lg px-3 py-2 hover:bg-white/5 hover:text-white">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <div class="relative z-10 flex min-h-screen w-full flex-col">
+    <main class="flex-grow">
+
+      <!-- HERO -->
+      <section id="hero" class="relative flex min-h-screen items-center justify-center text-center">
+        <div class="absolute inset-0 bg-background-dark/60"></div>
+        <div class="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300">
+            <span class="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_10px_2px_rgba(139,92,246,0.6)]"></span>
+            Último semestre de Ingeniería de Software
+          </span>
+          <h1 class="mt-6 text-4xl font-black text-white sm:text-5xl md:text-7xl">
+            Anderson Castro
+          </h1>
+          <!-- Foto de perfil -->
+          <div class="mt-6 flex justify-center">
+            <div class="profile-image">
+              <img src="./assets/images/FotoCV1.png" alt="Anderson Castro - Ingeniero de Software" class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full border-3 border-primary/30 shadow-xl shadow-cyan-500/20 ring-2 ring-white/10 object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+          </div>
+          <p class="mt-6 text-lg font-medium text-gray-300 md:text-xl">Ingeniero de Software</p>
+          <p class="mx-auto mt-6 max-w-2xl text-base text-gray-400 sm:text-lg">“Optimizo procesos, desarrollo soluciones y gestiono proyectos con impacto real”</p>
+          <div class="mt-10 flex items-center justify-center gap-4">
+            <a href="#about" class="inline-block rounded-lg bg-primary px-8 py-3 text-base font-bold text-white shadow-lg shadow-cyan-500/20 ring-1 ring-cyan-400/30 transition hover:-translate-y-0.5 hover:bg-primary/90">Ver Información</a>
+            <a href="#projects" class="inline-block rounded-lg bg-white/5 px-8 py-3 text-base font-bold text-white ring-1 ring-white/10 transition hover:-translate-y-0.5 hover:bg-white/10">Ver Proyectos</a>
+            <a href="./assets/cv-anderson-castro.pdf" download class="inline-block rounded-lg bg-accent px-8 py-3 text-base font-bold text-white ring-1 ring-white/10 transition hover:-translate-y-0.5 hover:brightness-110">Descargar CV</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE MÍ -->
+      <section id="about" class="relative bg-background-dark py-24">
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="reveal text-3xl font-bold text-primary mb-6">Sobre mí</h2>
+          <p class="reveal text-gray-300 leading-relaxed">
+            Soy Anderson Castro, ingeniero de software en formación (último semestre). Experiencia en automatización con Python, desarrollo web y gestión de proyectos en Azure DevOps. Multifuncional, con experiencia en pruebas de calidad y optimización de recursos.
+          </p>
+          <div class="reveal mt-10 experience-grid text-gray-400">
+            <div class="surface narrow p-6">
+              <h3 class="text-xl font-semibold text-white">Experiencia</h3>
+              <ul class="list-disc list-inside mt-3 space-y-2">
+                <li>Softland: Automatización con Python</li>
+                <li>fUSoft: Desarrollo web y gestión de proyectos en Azure DevOps</li>
+              </ul>
+            </div>
+            <div class="surface narrow p-6">
+              <h3 class="text-xl font-semibold text-white">Formación</h3>
+              <p class="mt-3">Último semestre de Ingeniería de Software</p>
+            </div>
+          </div>
+
+          <!-- Timeline experiencia -->
+          <div class="reveal mt-12 timeline">
+            <ol class="relative border-s-2 border-cyan-400/30 ps-2">
+              <li class="mb-10 ms-6">
+                <span class="absolute -start-3 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-cyan-500 ring-4 ring-background-dark">🔧</span>
+                <h4 class="text-white font-semibold">Softland — Automatización con Python</h4>
+                <p class="text-gray-400 text-sm">Scripts para optimización de recursos y soporte a QA.</p>
+              </li>
+              <li class="ms-6">
+                <span class="absolute -start-3 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-violet-500 ring-4 ring-background-dark">🗂️</span>
+                <h4 class="text-white font-semibold">fUSoft — Desarrollo web y Azure DevOps</h4>
+                <p class="text-gray-400 text-sm">Gestión de proyectos, CI/CD y desarrollo frontend/backend.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- HABILIDADES -->
+      <section id="skills" class="bg-background-dark py-24">
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="reveal text-3xl font-bold text-primary mb-10">Habilidades</h2>
+          <div class="grid gap-10 md:grid-cols-2">
+            <div class="reveal">
+              <h3 class="text-xl font-semibold text-white mb-4">Hard Skills</h3>
+              <div class="flex flex-wrap gap-3">
+                <span class="badge">JavaScript</span>
+                <span class="badge">TypeScript</span>
+                <span class="badge">Angular</span>
+                <span class="badge">Python</span>
+                <span class="badge">Azure DevOps</span>
+                <span class="badge">K6</span>
+              </div>
+            </div>
+            <div class="reveal">
+              <h3 class="text-xl font-semibold text-white mb-4">Soft Skills</h3>
+              <div class="flex flex-wrap gap-3">
+                <span class="badge">Comunicación</span>
+                <span class="badge">Trabajo en equipo</span>
+                <span class="badge">Aplicado</span>
+                <span class="badge">Pruebas de calidad</span>
+                <span class="badge">Multifuncionalidad</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills por categoría con íconos -->
+          <div class="reveal mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div class="surface rounded-xl border border-white/10 bg-white/5 p-5">
+              <h4 class="mb-3 font-semibold text-white">Frontend</h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="pill"><img alt="JavaScript" src="https://cdn.simpleicons.org/javascript/FFD600"/><span>JavaScript</span></span>
+                <span class="pill"><img alt="TypeScript" src="https://cdn.simpleicons.org/typescript/3178C6"/><span>TypeScript</span></span>
+                <span class="pill"><img alt="Angular" src="https://cdn.simpleicons.org/angular/DD0031"/><span>Angular</span></span>
+              </div>
+            </div>
+            <div class="surface rounded-xl border border-white/10 bg-white/5 p-5">
+              <h4 class="mb-3 font-semibold text-white">Backend</h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="pill"><img alt="Python" src="https://cdn.simpleicons.org/python/3776AB"/><span>Python</span></span>
+                <span class="pill"><img alt="Node.js" src="https://cdn.simpleicons.org/nodedotjs/339933"/><span>Node.js</span></span>
+                <span class="pill"><img alt="PostgreSQL" src="https://cdn.simpleicons.org/postgresql/4169E1"/><span>PostgreSQL</span></span>
+              </div>
+            </div>
+            <div class="surface rounded-xl border border-white/10 bg-white/5 p-5">
+              <h4 class="mb-3 font-semibold text-white">DevOps</h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="pill"><img alt="Azure DevOps" src="https://cdn.simpleicons.org/azuredevops/0078D7"/><span>Azure DevOps</span></span>
+                <span class="pill"><img alt="Git" src="https://cdn.simpleicons.org/git/F05032"/><span>Git</span></span>
+              </div>
+            </div>
+            <div class="surface rounded-xl border border-white/10 bg-white/5 p-5">
+              <h4 class="mb-3 font-semibold text-white">Testing</h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="pill"><img alt="K6" src="https://cdn.simpleicons.org/k6/7D64FF"/><span>K6</span></span>
+                <span class="pill"><img alt="Jest" src="https://cdn.simpleicons.org/jest/C21325"/><span>Jest</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROYECTOS -->
+      <section id="projects" class="bg-background-dark py-24">
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="reveal text-3xl font-bold text-primary mb-10">Proyectos</h2>
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+            <!-- Proyecto 1: MindCare API -->
+            <article class="card reveal group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_10px_30px_-10px_rgba(6,182,212,0.5)]">
+              <div class="h-40 w-full overflow-hidden">
+                <div class="h-full w-full bg-gradient-to-tr from-cyan-500/30 to-violet-500/30 transition-transform duration-300 group-hover:scale-105"></div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-xl font-semibold text-white">MindCare API</h3>
+                <p class="text-gray-400 text-sm mt-2">Plataforma de bienestar estudiantil (B2B2C), desarrollada con Node.js + TypeScript bajo arquitectura Hexagonal. Incluye autenticación JWT, gestión de estudiantes, psicólogos y universidades, con énfasis en escalabilidad y buenas prácticas de backend.</p>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                  <span class="tech">Node.js</span>
+                  <span class="tech">TypeScript</span>
+                  <span class="tech">Arquitectura Hexagonal</span>
+                  <span class="tech">JWT</span>
+                </div>
+                <div class="mt-4 flex items-center gap-4 text-sm">
+                  <a target="_blank" href="https://github.com/AnderCalistek/Backend_MindCare" class="ml-auto inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white ring-1 ring-cyan-400/30 transition hover:brightness-110 hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
+                      <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.338-2.221-.253-4.555-1.113-4.555-4.952 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.295 2.748-1.026 2.748-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.337 4.696-4.566 4.945.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .267.18.578.688.48A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z" clip-rule="evenodd"/>
+                    </svg>
+                    Ver en GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Proyecto 2: Uniempresarial Mega Campus del Futuro -->
+            <article class="card reveal group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-violet-400/40 hover:shadow-[0_10px_30px_-10px_rgba(139,92,246,0.5)]">
+              <div class="h-40 w-full overflow-hidden">
+                <div class="h-full w-full bg-gradient-to-tr from-violet-500/30 to-cyan-500/30 transition-transform duration-300 group-hover:scale-105"></div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-xl font-semibold text-white">Uniempresarial Mega Campus del Futuro</h3>
+                <p class="text-gray-400 text-sm mt-2">Campus virtual avanzado, desarrollado en React + Vite, con diseño profesional y responsivo, siguiendo un mockup moderno.</p>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                  <span class="tech">React</span>
+                  <span class="tech">Vite</span>
+                  <span class="tech">Diseño Responsivo</span>
+                  <span class="tech">UI/UX</span>
+                </div>
+                <div class="mt-4 flex items-center gap-4 text-sm">
+                  <a target="_blank" href="https://github.com/Cristian1443/PaginaCampus" class="ml-auto inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white ring-1 ring-violet-400/30 transition hover:brightness-110 hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
+                      <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.338-2.221-.253-4.555-1.113-4.555-4.952 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.295 2.748-1.026 2.748-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.337 4.696-4.566 4.945.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .267.18.578.688.48A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z" clip-rule="evenodd"/>
+                    </svg>
+                    Ver en GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="card reveal group overflow-hidden rounded-xl border border-white/10 bg-white/5 transition hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_10px_30px_-10px_rgba(6,182,212,0.5)]">
+              <div class="h-40 w-full overflow-hidden">
+                <div class="h-full w-full bg-gradient-to-tr from-cyan-500/30 to-violet-500/30 transition-transform duration-300 group-hover:scale-105"></div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-xl font-semibold text-white">Portal Financiero</h3>
+                <p class="text-gray-400 text-sm mt-2">Aplicación Angular para gestión de clientes y productos bancarios con Azure DevOps.</p>
+                <div class="mt-3 flex flex-wrap gap-2 text-xs">
+                  <span class="tech">Angular</span>
+                  <span class="tech">TypeScript</span>
+                  <span class="tech">Azure DevOps</span>
+                </div>
+                <div class="mt-4 flex items-center gap-4 text-sm">
+                  <a target="_blank" href="#" class="link">GitHub</a>
+                  <a target="_blank" href="#" class="link">Demo</a>
+                  <a href="#" class="ml-auto inline-flex items-center rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-cyan-400/30 transition hover:brightness-110">Ver más</a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contact" class="bg-background-dark py-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="reveal text-3xl font-bold text-primary mb-6">Contacto</h2>
+          <p class="reveal text-gray-300 mb-6">¿Quieres trabajar conmigo? Escríbeme:</p>
+          <form id="contactForm" class="reveal mx-auto mt-4 grid max-w-2xl grid-cols-1 gap-4 text-left">
+            <div>
+              <label class="mb-1 block text-sm text-gray-400">Nombre</label>
+              <input required type="text" name="name" class="w-full rounded-lg border-white/10 bg-white/5 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400" placeholder="Tu nombre"/>
+            </div>
+            <div>
+              <label class="mb-1 block text-sm text-gray-400">Email</label>
+              <input required type="email" name="email" class="w-full rounded-lg border-white/10 bg-white/5 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400" placeholder="tu@email.com"/>
+            </div>
+            <div>
+              <label class="mb-1 block text-sm text-gray-400">Mensaje</label>
+              <textarea required name="message" rows="4" class="w-full rounded-lg border-white/10 bg-white/5 text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-cyan-400" placeholder="Cuéntame sobre tu proyecto"></textarea>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-3">
+              <button type="submit" class="inline-flex items-center rounded-lg bg-primary px-6 py-2.5 text-sm font-semibold text-white ring-1 ring-cyan-400/30 transition hover:-translate-y-0.5 hover:brightness-110">Enviar</button>
+              <a href="./assets/cv-anderson-castro.pdf" download class="inline-flex items-center rounded-lg bg-white/5 px-6 py-2.5 text-sm font-semibold text-white ring-1 ring-white/10 transition hover:-translate-y-0.5 hover:bg-white/10">Descargar CV</a>
+            </div>
+          </form>
+          <div class="reveal mt-8 flex justify-center gap-6">
+            <a target="_blank" href="#" class="social" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.337-.027-3.059-1.862-3.059-1.863 0-2.148 1.454-2.148 2.957v5.706h-3v-10h2.879v1.367h.041c.401-.76 1.379-1.561 2.839-1.561 3.037 0 3.6 2.001 3.6 4.604v5.59z"/></svg>
+            </a>
+            <a target="_blank" href="#" class="social" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.156-1.11-1.465-1.11-1.465-.908-.62.069-.608.069-.608 1.003.07 1.531 1.031 1.531 1.031.892 1.53 2.341 1.088 2.91.833.091-.647.35-1.088.636-1.338-2.221-.253-4.555-1.113-4.555-4.952 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.56 9.56 0 0 1 2.504.337c1.909-1.295 2.748-1.026 2.748-1.026.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.337 4.696-4.566 4.945.359.31.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .267.18.578.688.48A10.019 10.019 0 0 0 22 12.017C22 6.484 17.523 2 12 2Z" clip-rule="evenodd"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900/80 ring-1 ring-white/5 py-6 text-center text-gray-400">
+      Desarrollado por Anderson Castro © 2025
+    </footer>
+  </div>
+
+  <script src="./js/main.js"></script>
+
+</body>
+</html>
+
+
