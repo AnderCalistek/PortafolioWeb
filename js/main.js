@@ -51,15 +51,25 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 revealElements.forEach(el => io.observe(el));
 
-// Contact form -> mailto
-const form = document.getElementById('contactForm');
-if (form) form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const data = new FormData(form);
-  const name = data.get('name');
-  const email = data.get('email');
-  const message = data.get('message');
-  const subject = encodeURIComponent(`Contacto desde portafolio - ${name}`);
-  const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`);
-  window.location.href = `mailto:anderson.castro@email.com?subject=${subject}&body=${body}`;
-});
+// Función para copiar al portapapeles
+function copyToClipboard(elementId) {
+  const element = document.getElementById(elementId);
+  if (!element) return;
+  
+  const text = element.textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    // Encontrar el botón cercano al elemento
+    const button = element.parentElement.querySelector('button');
+    if (!button) return;
+    
+    const originalText = button.textContent;
+    button.textContent = '¡Copiado!';
+    
+    // Restaurar el texto original después de 2 segundos
+    setTimeout(() => {
+      button.textContent = originalText;
+    }, 2000);
+  }).catch(err => {
+    console.error('Error al copiar:', err);
+  });
+}
